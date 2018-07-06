@@ -8,17 +8,17 @@ import Indexpage from 'views/index/index';
 Vue.use(Router);
 
 export default new Router({
-    // mode: 'history', //后端支持可开
-    // scrollBehavior: () => ({ y: 0 }),
-    routes: [
-        {
-            path: '/',
-            component: Layout,
-            noDropdown: true,
-            icon: 'home',
-            children: [
-                { path: '/index', component: Indexpage ,name:'Index',hidden: true } ,
-            ]
-        }
-    ]
+	// mode: 'history', //后端支持可开
+	// scrollBehavior: () => ({ y: 0 }),
+	routes: [
+		{
+			path: '/',
+			component: Layout,
+			noDropdown: true,
+			icon: 'home',
+			children: [
+				{ path: '/index', component: Indexpage, name: 'Index', hidden: true },
+			]
+		}
+	]
 });
