@@ -13,7 +13,7 @@
 </template>
 <style scoped>
   .wrapper{
-    width: 800px;
-    margin: 30px auto;
+    /* width: 800px;
+    margin: 30px auto; */
   }
 </style>
