@@ -86,7 +86,7 @@
                     </Breadcrumb>
                     <Content :style="{padding: '24px', minHeight: '600px', background: '#fff'}">
                         <div>
-													<router-view></router-view>
+                            <router-view :key="key"></router-view>
                         </div>
                     </Content>
                 </Layout>
@@ -95,7 +95,22 @@
     </div>
 </template>
 <script>
+    import router from './../../router';
+    // import store from 'common/store';
     export default {
-        
+        data () {
+            return {
+                cyear: Date.now(),
+                levelList: null,
+            }
+        },
+        computed: {
+            key() {
+                //document.title = this.$route.name;
+                return this.$route.name !== undefined
+                    ? this.$route.name + +new Date()
+                    : this.$route + +new Date()
+            },
+        },
     }
 </script>
